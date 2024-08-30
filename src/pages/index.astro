@@ -1,0 +1,12 @@
+---
+import DefaultPage from '../layouts/DefaultPage.astro';
+import SimpleCenteredHero from '../components/sections/SimpleCenteredHero.astro';
+import CenteredTwoByTwoFeatured from '../components/sections/CenteredTwoByTwoFeature.astro';
+import SimpleStats from '../components/sections/SimpleStats.astro';
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+---
+<DefaultPage>
+	<SimpleCenteredHero />
+	<SimpleStats />
+	<CenteredTwoByTwoFeatured />
+</DefaultPage>
