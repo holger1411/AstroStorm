@@ -1,6 +1,8 @@
-# AstroStorm
+# About AstroStorm
+Have you ever noticed how odd it is that designers build complex systems in tools like Figma to simulate HTML, CSS, and JS, only for developers to then translate it back into real web technologies? Congratulations! You're one of the rare "front-of-the-frontend" developers. AstroStorm is made specifically for you - with its "design-in-code" approach, it bridges the gap between design and development. Start where your design lives: Within the code.
 
-AstroStorm is a modern web application built with Astro, React, and Tailwind CSS. It provides a solid foundation for building fast, efficient, and responsive websites.
+# What is AstroStorm?
+AstroStorm is a modern web application toolkit built with Astro, React, and Tailwind CSS. It provides a solid foundation for building fast, efficient, and responsive websites.
 
 ## Features
 
