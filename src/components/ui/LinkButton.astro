@@ -1,0 +1,27 @@
+---
+// LinkButton.astro
+interface Props {
+  href: string;
+  variant?: 'primary' | 'secondary';
+  class?: string;
+  target?: string;
+}
+
+const { href, variant = 'primary', target, class: className = '' } = Astro.props;
+
+const baseStyles = 'rounded-full transition-colors inline-block px-10 py-3.5 no-underline';
+const variantStyles = {
+  primary: 'bg-primary text-sm font-semibold text-white shadow-xl hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900',
+  secondary: 'bg-gray-200 text-gray-800 hover:bg-gray-300'
+};
+
+const linkClasses = `${baseStyles} ${variantStyles[variant]} ${className}`;
+---
+
+<a
+  href={href}
+  class={linkClasses}
+  target={target}
+>
+  <slot />
+</a>

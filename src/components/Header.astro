@@ -3,20 +3,20 @@ import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
-<header class="bg-whites">
+<header class="bg-white">
 	<nav class="mx-auto flex items-center justify-between p-6 lg:px-8" aria-label="Global">
 	  <div class="flex lg:flex-1">
-		<a href="/" class="-m-1.5 p-1.5">
+		<a href="/" class="-m-1.5 p-1.5 no-underline">
 			{SITE_TITLE}
 		</a>
 	  </div>
 	  <div class="lg:flex lg:gap-x-12">
-		<HeaderLink href="/" class="text-sm font-semibold leading-6 text-gray-900">Home</HeaderLink>
-		<HeaderLink href="/blog" class="text-sm font-semibold leading-6 text-gray-900">Blog</HeaderLink>
-		<HeaderLink href="/about" class="text-sm font-semibold leading-6 text-gray-900">About</HeaderLink>
+		<HeaderLink href="/" class="text-sm font-semibold leading-6 text-gray-900 no-underline">Home</HeaderLink>
+		<HeaderLink href="/blog" class="text-sm font-semibold leading-6 text-gray-900 no-underline">Blog</HeaderLink>
+		<HeaderLink href="/about" class="text-sm font-semibold leading-6 text-gray-900 no-underline">About</HeaderLink>
 	  </div>
 	  <div class="lg:flex lg:flex-1 lg:justify-end">
-		<a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
+		<a href="#" class="text-sm font-semibold leading-6 text-gray-900 no-underline">GitHub <span aria-hidden="true">&rarr;</span></a>
 	  </div>
 	</nav>
   </header>

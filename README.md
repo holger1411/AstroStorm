@@ -2,27 +2,30 @@
 Have you ever noticed how odd it is that designers build complex systems in tools like Figma to simulate HTML, CSS, and JS, only for developers to then translate it back into real web technologies? Congratulations! You're one of the rare "front-of-the-frontend" developers. AstroStorm is made specifically for you - with its "design-in-code" approach, it bridges the gap between design and development. Start where your design lives: Within the code.
 
 # What is AstroStorm?
-AstroStorm is a modern web application toolkit built with Astro, React, and Tailwind CSS. It provides a solid foundation for building fast, efficient, and responsive websites.
+AstroStorm is a modern web application toolkit built with Astro and Tailwind CSS. It provides a solid foundation for building fast, efficient, and responsive websites.
 
 ## Features
 
 - Built with Astro for optimal performance and static site generation
-- React integration for dynamic components
 - Tailwind CSS for utility-first styling
 - MDX support for enhanced Markdown capabilities
 - RSS feed generation
 - Sitemap generation for improved SEO
 - TypeScript support for type-safe development
+- Reusable UI components and section components
+- Blog functionality with Markdown support
 
 ## Project Structure
 
 ```
 .
 ├── public/
-│   └── fonts/
+│   ├── fonts/
+│   └── (other static assets)
 ├── src/
 │   ├── components/
-│   │   └── sections/
+│   │   ├── sections/
+│   │   └── ui/
 │   ├── content/
 │   │   └── blog/
 │   ├── layouts/
@@ -31,7 +34,6 @@ AstroStorm is a modern web application toolkit built with Astro, React, and Tail
 │   │   └── blog/
 │   └── styles/
 ├── astro.config.mjs
-├── components.json
 ├── package.json
 ├── tailwind.config.mjs
 └── tsconfig.json
@@ -60,7 +62,6 @@ AstroStorm is a modern web application toolkit built with Astro, React, and Tail
 ## Dependencies
 
 - Astro
-- React
 - Tailwind CSS
 - MDX
 - TypeScript
@@ -71,6 +72,23 @@ AstroStorm is a modern web application toolkit built with Astro, React, and Tail
 - Astro configuration is in `astro.config.mjs`
 - Tailwind CSS configuration is in `tailwind.config.mjs`
 - TypeScript configuration is in `tsconfig.json`
+
+## Components
+
+AstroStorm includes a variety of pre-built components to help you quickly create web pages:
+
+### Section Components
+
+- HeroSimpleCentered: A centered hero section
+- HeroFullBottomLeft: A full-width hero section with content aligned to the bottom left
+- SimpleStats: A section for displaying key statistics
+- CenteredTwoByTwoFeature: A feature grid with a 2x2 layout
+- TestimonialSimpleCentered: A centered testimonial section
+- Faq: A frequently asked questions section
+
+### UI Components
+
+- LinkButton: A customizable button component that can act as a link
 
 ## License
 

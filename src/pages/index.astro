@@ -1,12 +1,20 @@
 ---
 import DefaultPage from '../layouts/DefaultPage.astro';
-import SimpleCenteredHero from '../components/sections/SimpleCenteredHero.astro';
 import CenteredTwoByTwoFeatured from '../components/sections/CenteredTwoByTwoFeature.astro';
+import HeroSimpleCentered from '../components/sections/HeroSimpleCentered.astro';
+import HeroFullBottomLeft from '../components/sections/HeroFullBottomLeft.astro';
 import SimpleStats from '../components/sections/SimpleStats.astro';
+import TestimonialSimpleCentered from '../components/sections/TestimonialSimpleCentered.astro';
+import Faq from '../components/sections/Faq.astro';
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 <DefaultPage>
-	<SimpleCenteredHero />
+	<!-- <HeroFullBottomLeft></HeroFullBottomLeft>-->
+	<HeroSimpleCentered />
 	<SimpleStats />
 	<CenteredTwoByTwoFeatured />
+	<TestimonialSimpleCentered />
+	 <div class="mt-12">
+		<Faq />
+	 </div>
 </DefaultPage>
