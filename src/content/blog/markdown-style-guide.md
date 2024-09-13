@@ -3,7 +3,7 @@ title: "Out-of-This-World Groceries: When Predator and Alien Go Retail"
 pubDate: "2024-09-08"
 author: "Jane Doe"
 category: "Business"
-tags: [retail, extraterrestrial, startup, humor]
+tags: [retail, extraterrestrial, startup, humor, blogging]
 heroImage: "/blog-placeholder-1.jpg"
 description: "Explore the hilarious yet insightful business journey of a Predator and an Alien as they navigate the challenges of opening a grocery store in Manhattan. From interstellar imports to tax nightmares, this blog post offers a unique perspective on entrepreneurship that's truly out of this world."
 ---

@@ -1,12 +1,17 @@
 ---
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
+import { Icon } from 'astro-icon/components'
 ---
 
 <header class="bg-white">
 	<nav class="mx-auto flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-	  <div class="flex lg:flex-1">
-		<a href="/" class="-m-1.5 p-1.5 no-underline">
+	  <div class="flex flex-auto lg:flex-1">
+		<a href="/" class="-m-1.5 p-1.5 no-underline flex flex-row h-16">
+			<Icon name="rocket"
+			width="28px";
+			height="28px";
+			/>
 			{SITE_TITLE}
 		</a>
 	  </div>
