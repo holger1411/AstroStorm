@@ -4,10 +4,11 @@ import { SITE_TITLE } from '../consts';
 import { Icon } from 'astro-icon/components'
 ---
 
-<header class="bg-white">
-	<nav class="mx-auto flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-	  <div class="flex flex-auto lg:flex-1">
-		<a href="/" class="-m-1.5 p-1.5 no-underline flex flex-row h-16">
+<header class="backdrop-blur-lg bg-white/75 fixed w-screen z-10 shadow-xl">
+	<div class="container">
+	<nav class="mx-auto flex items-center justify-between py-6" aria-label="Global">
+	  <div class="flex flex-auto lg:flex-1 items-center">
+		<a href="/" class="no-underline flex">
 			<Icon name="rocket"
 			width="28px";
 			height="28px";
@@ -24,4 +25,5 @@ import { Icon } from 'astro-icon/components'
 		<a href="#" class="text-sm font-semibold leading-6 text-gray-900 no-underline">GitHub <span aria-hidden="true">&rarr;</span></a>
 	  </div>
 	</nav>
+	</header>
   </header>

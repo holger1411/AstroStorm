@@ -67,7 +67,7 @@
     @apply bg-background text-foreground;
   }
   h1 {
-    @apply scroll-m-20 text-5xl font-extrabold tracking-tight lg:text-6xl;
+    @apply scroll-m-20 text-5xl font-extrabold lg:text-6xl;
   }
   h2 {
     @apply scroll-m-20 text-4xl font-semibold tracking-tight mt-6 mb-2;
@@ -85,7 +85,7 @@
     @apply scroll-m-20 text-lg font-bold tracking-tight;
   }
   p {
-    @apply leading-7 [&:not(:first-child)]:mb-4;
+    @apply leading-7 mb-4;
   }
   blockquote {
     @apply mt-6 italic;
@@ -98,6 +98,9 @@
   }
   a {
     @apply transition ease-in-out delay-150 duration-300 font-medium text-primary underline hover:no-underline hover:opacity-75 ;
+  }
+  .active {
+    @apply text-red-800;
   }
 }
 

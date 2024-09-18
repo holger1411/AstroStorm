@@ -6,11 +6,14 @@ import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
+	const { title, description, pubDate, updatedDate, tags, heroImage } = Astro.props;
+	const formatTagUrl = (tag: string) => {
+	return tag.toLowerCase().replace(/\s+/g, '-');
+	};
+	---
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
----
+	<html lang="en">
 
-<html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
 	</head>
@@ -19,31 +22,46 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<Header />
 		<main class="bg-white">
 			<div class="container mx-auto flex justify-center max-w-6xl">
-					{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
+				{heroImage && <img width={1020} height={510} src={heroImage} alt="" class="rounded-[8px] shadow-xl" />}
 			</div>
-		<div class="container mx-auto flex justify-center max-w-2xl">
-			<article>
-	
-				<div class="prose">
-					<div class="title">
-						<h1 class="border-b">{title}</h1>
-						<div class="date my-3">
-							<FormattedDate date={pubDate} />
-							{
+
+			<div class="container mx-auto flex justify-center max-w-2xl">
+				<article>
+					<div class="prose">
+						<div class="title">
+
+							<h1 class="border-b pt-16 pb-6">{title}</h1>
+
+							<div class="date my-3">
+								<FormattedDate date={pubDate} />
+								{
 								updatedDate && (
-									<div>
-										Last updated on <FormattedDate date={updatedDate} />
-									</div>
+								<div>
+									Last updated on
+									<FormattedDate date={updatedDate} />
+								</div>
 								)
-							}
+								}
+							</div>
+
+						</div>
+						<slot />
+						<div class="text-sm border-t padding py-4">Tags for this article:</div>
+						<div class="flex flex-wrap gap-2 mb-8">
+							{tags.map((tag) => (
+							<a href={`/tags/${formatTagUrl(tag)}`}
+								class="text-xs font-medium cursor-pointer hover:bg-primary hover:text-primary-foreground transition-colors duration-300 bg-gray-200 text-primary no-underline rounded-md p-2 py-1">
+								{tag}
+							</a>
+							))}
 						</div>
 					</div>
-					<slot />
-				</div>
-			</article>
+				</article>
 			</div>
-		</main>		</div>
+		</main>
+		</div>
 		<Footer />
 
 	</body>
-</html>
+
+	</html>

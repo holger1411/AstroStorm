@@ -1,5 +1,5 @@
 ---
-import DefaultPage from '../layouts/DefaultPage.astro';
+import Layout from '../layouts/EmptyPage.astro';
 import CenteredTwoByTwoFeatured from '../components/sections/CenteredTwoByTwoFeature.astro';
 import HeroSimpleCentered from '../components/sections/HeroSimpleCentered.astro';
 import HeroFullBottomLeft from '../components/sections/HeroFullBottomLeft.astro';
@@ -9,7 +9,7 @@ import PricingSinglePrice from '../components/sections/PricingSinglePrice.astro'
 import LogoCloudSimple from '../components/sections/LogoCloudSimple.astro';
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
-<DefaultPage>
+<Layout>
 	<!-- <HeroFullBottomLeft></HeroFullBottomLeft>-->
 	<HeroSimpleCentered />
 	<SimpleStats />
@@ -20,4 +20,4 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<LogoCloudSimple />
 	</div>
 
-</DefaultPage>
+</Layout>

@@ -11,10 +11,8 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
 	<body class="bg-black">
 		<Header />
-		<main class="bg-white py-16">
-			<div class="container">
+		<main>
 			<slot />
-		</div>
 		</main>
 		<Footer />
 	</body>
